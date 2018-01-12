@@ -1,60 +1,133 @@
-<!DOCTYPE html>
-
 <html>
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie-edge">    
-    <script type="text/javascript">
-        function showBuyLink() {
-          document.getElementById("buylink").style.visibility = "visible";
+<header>
+    <script>
+                function showBuyLink() {
+          document.getElementById("links").style.visibility = "visible";
+
+
         }
         // adjust this as needed, 1 sec = 1000
-        setTimeout("showBuyLink()", 12000); 
+        setTimeout("showBuyLink()", 12000);
+        function reset(id)
+{
+    document.getElementById(id).style.zIndex = '0';
+}
+
+function up(id)
+{
+    document.getElementById(id).style.zIndex = '1';
+}
+
+function resetAll()
+{
+    for (var i = 1; i <= 2; i++)
+    {
+        reset('div' + i);
+    }
+}
+
+
     </script>
     <style>
-    .btn{
-        position:absolute; 
-        bottom:420px;
-        background:rgb(223, 217, 217);
-        color:#000; 
-        left:0px;
-        width:96px; 
-        height:50px; 
-        border:none; 
-        margin:0; 
-        padding:10; 
-        overflow:hidden;
-        z-index:20;
-        font-size:14px;
-    }
-    
-    .sezPhase{
-        display:none;
-        z-index:99999;
-    }
+        #div1
+{
+position:absolute;
+left:0px;
+top:0px;
+z-index:-1;
+width:100px;
+height:100px;
+
+}
+#div2
+{
+position:absolute;
+left:0px;
+top:0px;
+z-index:-1;
+
+}
+
+.btn1{
+    position:absolute; 
+    bottom:-300px;
+    background:rgb(223, 217, 217);
+    color:#000; 
+    left:0px;
+    width:96px; 
+    height:50px; 
+    border:none; 
+    margin:0; 
+    padding:10; 
+    overflow:hidden;
+    z-index:20;
+    font-size:14px;
+}
+
+.btn1:hover{
+    background:rgb(136, 134, 134);
+}
+
+.btn2:hover{
+    background:rgb(136, 134, 134);
+}
+
+.btn2{
+    position:absolute; 
+    bottom:-350px;
+    background:rgb(223, 217, 217);
+    color:#000; 
+    left:0px;
+    width:96px; 
+    height:50px; 
+    border:none; 
+    margin:0; 
+    padding:10; 
+    overflow:hidden;
+    z-index:20;
+    font-size:14px;
+}
+
+.ribbon{
+                        position:absolute;
+                        background:rgb(0, 0, 0);
+                        top:74.9px;
+                        left:0px;
+                        width:100px;
+                        height:950px;
+        
+                    }
+#links
+{
+position:absolute;
+left:0px;
+top:200px;
+z-index:99999;
+visibility:hidden;
+}
+    </style>
+</header>
+<body>
+        <img src="https://storage.googleapis.com/dronamapsendpoint/logo/dronamaps_logo_white_small.png" style="position:fixed; top:50px; right:50px; height:150px; border:none; margin:0; padding:10; overflow:hidden; z-index:50;">
+<style type="text/css">
+
 </style>
-</head>
 
-<img src="https://storage.googleapis.com/dronamapsendpoint/logo/dronamaps_logo_white_small.png" style="position:fixed; top:50px; right:50px; height:150px; border:none; margin:0; padding:10; overflow:hidden; z-index:99999;">
-            <div class="maps" style="overflow: hidden; margin-top: -55px; margin-left: 0px; position: absolute;">
-                <iframe style="z-index:0" src="http://landsatexplorer.esri.com" height="1030" width="1850" >
-            </iframe>
-            <div id="buylink" style="visibility: hidden">
-            <a href="link/sez.html"><button class="btn" type="button" >Click here<br> for<br>Maheshwar</button></a>
-            </div>
-            <style>
-                .btn:hover{
-                    background:rgb(170, 166, 166);
-                }
-            </style>
-        </div>
+<div id="div1" ><iframe src="https://www.arcgis.com/apps/View/index.html?appid=0e63b4b3b80140aaad8e427a102b4523" height="1030" width="1850" >
+</iframe>
+<div class="ribbon"></div>
 
-            <style>.embed-container {position: relative; padding-bottom: 80%;display: none; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;z-index:30;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="SEZ-Phase1" src="//www.arcgis.com/apps/Embed/index.html?webmap=8bd6dd4b20f64b33b8df532fa34c0214&amp;extent=75.595,22.6228,75.603,22.6271&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=false&basemap_gallery=true&disable_scroll=false&theme=light"></iframe></div>
+</div>
+<div id="div2" style="overflow: hidden; margin-top: -55px; margin-left: 0px; position: absolute;"><iframe src="http://landsatexplorer.esri.com" height="1030" width="1850" >
+</iframe>
 
 
+</div>
 
-
+<div id="links">
+        <input class="btn2" type="button" value="back" onclick="resetAll(); up('div2');">
+        <input class="btn1" type="button" value="Maheshwar" onclick="resetAll(); up('div1');">
+</div>
 </body>
 
 </html>
