@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">    
+    <script type="text/javascript">
+        function showBuyLink() {
+          document.getElementById("buylink").style.visibility = "visible";
+        }
+        // adjust this as needed, 1 sec = 1000
+        setTimeout("showBuyLink()", 12000); 
+    </script>
+    <style>
+    .btn{
+        position:fixed; 
+        bottom:420px;
+        background:rgb(223, 217, 217);
+        color:#000; 
+        left:17px; 
+        height:50px; 
+        border:none; 
+        margin:0; 
+        padding:10; 
+        overflow:hidden;
+        z-index:20;
+        font-size:14px;
+    }
+    
+    .sezPhase{
+        display:none;
+        z-index:99999;
+    }
+</style>
+</head>
+
+<img src="https://storage.googleapis.com/dronamapsendpoint/logo/dronamaps_logo_white_small.png" style="position:fixed; top:50px; right:50px; height:150px; border:none; margin:0; padding:10; overflow:hidden; z-index:99999;">
+            <div class="maps" style="overflow: hidden; margin-top: -55px; margin-left: 0px; position: absolute;">
+                <iframe style="z-index:0" src="http://landsatexplorer.esri.com" height="1030" width="1850" >
+            </iframe>
+            <div id="buylink" style="visibility: hidden">
+            <a href="sez.html"><button class="btn" type="button" >Click here<br> for<br>Maheshwar</button></a>
+            </div>
+            <style>
+                .btn:hover{
+                    background:rgb(170, 166, 166);
+                }
+            </style>
+        </div>
+
+            <style>.embed-container {position: relative; padding-bottom: 80%;display: none; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;z-index:30;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="SEZ-Phase1" src="//www.arcgis.com/apps/Embed/index.html?webmap=8bd6dd4b20f64b33b8df532fa34c0214&amp;extent=75.595,22.6228,75.603,22.6271&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=false&basemap_gallery=true&disable_scroll=false&theme=light"></iframe></div>
+
+
+
+
+</body>
+
+</html>

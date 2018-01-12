@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <header>
+            <style>
+                    .ribbon{
+                        background:#000;
+                        top:-10px;
+                        left:-10px;
+                        width:95px;
+                        height:10000px;
+        
+                    }
+                    .bckbtn{
+                        background:rgb(0, 0, 0);
+                        color:#eee;
+                        padding:0;
+                        border:#000;
+                        top:150px;
+                        left:5px;
+                        width:90px; 
+                        z-index:20;  
+                    } 
+                    .bckbtn:hover{
+                        background:rgb(160, 159, 159);
+                    } 
+        
+                </style>
+    </header>
+<body>
+        <img src="https://storage.googleapis.com/dronamapsendpoint/logo/dronamaps_logo_white_small.png" style="position:fixed; top:50px; right:50px; height:150px; border:none; margin:0; padding:10; overflow:hidden; z-index:99999;">
+
+    <div class="ribbon">
+        <a href:"index.html"><button class="bckbtn" type="button">click to<br> go back</button></a>
+    </div>    
+    <div class="frame">
+    <iframe style="z-index:0;position:absolute; top:0; left:100px;" src="https://www.arcgis.com/apps/View/index.html?appid=0e63b4b3b80140aaad8e427a102b4523" height="970" width="1750" >
+    </div>
+</body>
+
+</html>
